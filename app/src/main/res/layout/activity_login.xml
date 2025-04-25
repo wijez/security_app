@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:padding="25dp">
+
+    <!-- Logo Placeholder -->
+    <View
+        android:id="@+id/logo_placeholder"
+        android:layout_width="208dp"
+        android:layout_height="208dp"
+        android:layout_marginTop="75dp"
+        android:background="@drawable/logo"
+        android:contentDescription="Logo"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.35" />
+
+    <!-- Phone Number Label -->
+
+    <!-- Phone Number Input Section -->
+    <TextView
+        android:id="@+id/phone_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="56dp"
+        android:textStyle="bold"
+        android:text="Số điện thoại"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo_placeholder" />
+
+    <LinearLayout
+        android:id="@+id/phone_input_layout"
+        android:layout_width="330dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="50dp"
+        android:background='@drawable/btn_r_white_solid'
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phone_label">
+
+
+        <TextView
+            android:layout_width="69dp"
+            android:layout_height="69dp"
+            android:gravity="center"
+            android:layout_gravity="top"
+            android:layout_marginTop="-10dp"
+            android:text="+84"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/txt_phone"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="-10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="Số điện thoại *"
+            android:inputType="phone"
+            android:textColorHint="@color/teal_700"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <!-- SMS/Voice Toggle -->
+    <LinearLayout
+        android:id="@+id/toggle_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phone_input_layout">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:checked="true"
+            android:paddingLeft="20dp"
+            android:text=" Tôi đồng ý với các"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:text="Điều khoản và dịch vụ"
+            android:textColor="@color/C_6B4226"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/toggle_layout"
+            tools:layout_editor_absoluteY="383dp" />
+    </LinearLayout>
+
+    <!-- Gửi mã xác thực Button -->
+    <Button
+        android:id="@+id/btn_verify"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/C_6B4226"
+        android:text="Gửi mã xác thực"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toggle_layout" />
+
+    <!-- Divider -->
+
+
+    <!-- Divider 1 (Left) -->
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="40dp"
+        android:background="#000000"
+        app:layout_constraintEnd_toStartOf="@id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_verify" />
+
+    <!-- Centered TextView -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hoặc đăng nhập với"
+        android:textColor="@color/C_6B4226"
+        app:layout_constraintTop_toTopOf="@id/divider1"
+        app:layout_constraintBottom_toBottomOf="@id/divider1"
+        app:layout_constraintStart_toEndOf="@id/divider1"
+        app:layout_constraintEnd_toStartOf="@id/divider" />
+
+    <!-- Divider 2 (Right) -->
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="40dp"
+        android:background="#000000"
+        app:layout_constraintStart_toEndOf="@id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_verify" />
+
+
+    <!-- Social Login Buttons -->
+    <LinearLayout
+        android:id="@+id/social_login_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/circle_button"
+            android:backgroundTint="@color/white"
+            android:scaleType="centerInside"
+            android:src="@drawable/facebook" />
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/circle_button"
+            android:backgroundTint="@color/white"
+            android:scaleType="centerInside"
+            android:src="@drawable/google" />
+    </LinearLayout>
+
+    <!-- Text Links -->
+    <TextView
+        android:id="@+id/busy_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="Bạn đã là thành viên? bạn có thể"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/social_login_layout" />
+
+    <TextView
+        android:id="@+id/terms_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Đăng nhập bằng mật khẩu"
+        android:textColor="@color/C_6B4226"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/busy_text" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
