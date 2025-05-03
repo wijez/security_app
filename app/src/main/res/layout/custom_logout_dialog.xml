@@ -1,0 +1,69 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgIcon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/question_mark"
+        android:layout_gravity="center"
+        android:contentDescription="Icon Warning" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đăng xuất"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:textColor="#000000"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/txtMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bạn chắc chắn muốn đăng xuất khỏi tài khoản này?"
+        android:textSize="14sp"
+        android:layout_marginTop="8dp"
+        android:textColor="#666666"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hủy bỏ"
+            android:backgroundTint="#FFFFFF"
+            android:paddingBottom="10dp"
+            android:textColor="#888888"
+            android:background="@drawable/bg_button_cancel"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="8dp"/>
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đăng xuất"
+            android:layout_marginStart="16dp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#6F4E37"
+            android:paddingBottom="10dp"
+            android:background="@drawable/bg_button_accept"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="8dp"/>
+    </LinearLayout>
+</LinearLayout>
